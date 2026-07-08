@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Your One Stop Shop</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <header class="header">
+        <div class="header__container">
+            <a href="#" class="header__logo"><i class="fas fa-shopping-bag"></i> ShopEase</a>
+
+            <nav class="header__nav" id="nav-menu">
+                <ul class="header__nav-list">
+                    <li><a href="#home" class="header__nav-link active">Home</a></li>
+                    <li><a href="#shop" class="header__nav-link">Shop</a></li>
+                    <li><a href="#categories" class="header__nav-link">Categories</a></li>
+                    <li><a href="#about" class="header__nav-link">About</a></li>
+                    <li><a href="#contact" class="header__nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <div class="header__search">
+                    <input type="text" id="search-input" placeholder="Search products...">
+                    <i class="fas fa-search" id="search-btn"></i>
+                </div>
+                <button class="header__login-btn"><i class="fas fa-user"></i> Login</button>
+                <div class="header__cart">
+                    <i class="fas fa-shopping-cart" id="cart-icon"></i>
+                    <span class="header__cart-badge" id="cart-badge">0</span>
+                </div>
+                <div class="header__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Search results dropdown -->
+        <div class="search-results" id="search-results"></div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="hero__content">
+            <h1 class="hero__title">Discover the <span class="highlight">Best Deals</span> Just for You</h1>
+            <p class="hero__desc">Shop the latest trends in electronics, fashion, and more at unbeatable prices. Free shipping on orders over $50!</p>
+            <a href="#shop" class="btn btn--primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="hero__image">
+            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&h=400&fit=crop" alt="Shopping Banner">
+        </div>
+    </section>
+
+    <!-- ===== CATEGORIES SECTION ===== -->
+    <section class="categories section" id="categories">
+        <h2 class="section__title">Shop by <span class="highlight">Category</span></h2>
+        <p class="section__subtitle">Find exactly what you're looking for</p>
+        <div class="categories__grid">
+            <div class="category-card" data-category="electronics">
+                <div class="category-card__icon"><i class="fas fa-laptop"></i></div>
+                <h3>Electronics</h3>
+            </div>
+            <div class="category-card" data-category="fashion">
+                <div class="category-card__icon"><i class="fas fa-tshirt"></i></div>
+                <h3>Fashion</h3>
+            </div>
+            <div class="category-card" data-category="shoes">
+                <div class="category-card__icon"><i class="fas fa-shoe-prints"></i></div>
+                <h3>Shoes</h3>
+            </div>
+            <div class="category-card" data-category="watches">
+                <div class="category-card__icon"><i class="fas fa-clock"></i></div>
+                <h3>Watches</h3>
+            </div>
+            <div class="category-card" data-category="beauty">
+                <div class="category-card__icon"><i class="fas fa-spa"></i></div>
+                <h3>Beauty</h3>
+            </div>
+            <div class="category-card" data-category="appliances">
+                <div class="category-card__icon"><i class="fas fa-blender"></i></div>
+                <h3>Home Appliances</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED PRODUCTS SECTION ===== -->
+    <section class="products section" id="shop">
+        <h2 class="section__title">Featured <span class="highlight">Products</span></h2>
+        <p class="section__subtitle">Handpicked just for you</p>
+        <div class="products__grid" id="products-grid">
+            <!-- Products will be injected by JavaScript -->
+        </div>
+    </section>
+
+    <!-- ===== SPECIAL OFFER BANNER ===== -->
+    <section class="offer section">
+        <div class="offer__banner">
+            <div class="offer__content">
+                <span class="offer__tag">Limited Time Offer</span>
+                <h2 class="offer__title">Up to <span class="highlight">50% Off</span> on Electronics</h2>
+                <p class="offer__desc">Get the latest gadgets at amazing prices. Offer ends soon!</p>
+                <a href="#shop" class="btn btn--primary">Grab the Deal <i class="fas fa-bolt"></i></a>
+            </div>
+            <div class="offer__image">
+                <img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=500&h=350&fit=crop" alt="Special Offer">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CUSTOMER REVIEWS SECTION ===== -->
+    <section class="reviews section" id="about">
+        <h2 class="section__title">What Our <span class="highlight">Customers</span> Say</h2>
+        <p class="section__subtitle">Trusted by thousands worldwide</p>
+        <div class="reviews__grid">
+            <div class="review-card">
+                <div class="review-card__stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="review-card__text">"Amazing quality and super fast delivery! The product exceeded my expectations. Highly recommend ShopEase to everyone."</p>
+                <div class="review-card__user">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                    <div>
+                        <h4>Sarah Johnson</h4>
+                        <span>Verified Buyer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-card__stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="review-card__text">"Best online shopping experience! Great prices, easy checkout, and the customer support team is very helpful."</p>
+                <div class="review-card__user">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mike Chen">
+                    <div>
+                        <h4>Mike Chen</h4>
+                        <span>Verified Buyer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-card__stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="review-card__text">"The variety of products is incredible. I found everything I needed in one place. Will definitely be shopping here again!"</p>
+                <div class="review-card__user">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Davis">
+                    <div>
+                        <h4>Emily Davis</h4>
+                        <span>Verified Buyer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NEWSLETTER SECTION ===== -->
+    <section class="newsletter section" id="contact">
+        <div class="newsletter__container">
+            <h2 class="newsletter__title">Subscribe to Our <span class="highlight">Newsletter</span></h2>
+            <p class="newsletter__desc">Get the latest updates on new products and exclusive offers straight to your inbox.</p>
+            <form class="newsletter__form" id="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn--primary">Subscribe <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__col">
+                <h3 class="footer__logo"><i class="fas fa-shopping-bag"></i> ShopEase</h3>
+                <p>Your trusted online shopping destination. We bring the best products right to your doorstep with unbeatable prices and excellent service.</p>
+                <div class="footer__social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Order Tracking</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Contact Info</h4>
+                <ul class="footer__contact">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St, New York, NY 10001</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> support@shopease.com</li>
+                    <li><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 9:00 PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 ShopEase. All rights reserved. | Designed with <i class="fas fa-heart"></i> for you</p>
+        </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="back-to-top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
